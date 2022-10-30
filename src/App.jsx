@@ -9,7 +9,7 @@ import './App.css'
 
 function App() {
   const [charLength, setCharLength] = useState(10)
-  const [pass, setPass] = useState("")
+  const [pass, setPass] = useState("Passwords Here")
   const [upper, setUpper] = useState(false)
   const [lower, setLower] = useState(false)
   const [number, setNumber] = useState(false)
@@ -58,14 +58,9 @@ function App() {
     return finalPass
   }
 
-  //function copy
-  const copy = () => {
-    return pass.select()
-  }
-
   return (
     <div className="App">
-      <Header pass={pass} copy={copy} />
+      <Header pass={pass} />
       <section className="App__container">
         <Selector length={charLength} setLength={setCharLength} />
         <Condition check={{ upper, lower, number, symbol }} setCheck={{ setUpper, setLower, setNumber, setSymbol }} />
