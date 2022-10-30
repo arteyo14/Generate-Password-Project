@@ -1,0 +1,33 @@
+.container {
+    width: 100%;
+    background: #18171F;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__output {
+        margin-right: 10px;
+    }
+
+    &__box {
+        width: 6px;
+        height: 15px;
+        border: 1px solid #fff;
+        list-style: none;
+        margin-right: 7px;
+    }
+}

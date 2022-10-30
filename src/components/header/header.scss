@@ -1,0 +1,43 @@
+.header {
+    max-width: 20rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+
+    &__title {
+        color: #B9B8BF;
+        margin-bottom: 10px;
+    }
+
+    &__content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #24232A;
+        padding: 10px 25px;
+    }
+
+    button[type="submit"] {
+        background: transparent;
+        border: 1px solid #A4FCAF;
+        color: #A4FCAF;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    button[type="submit"]:hover {
+        background: #A4FCAF;
+        color: #000;
+        font-weight: 600;
+    }
+
+    button[type="submit"]:active {
+        transform: scale(0.95);
+    }
+}

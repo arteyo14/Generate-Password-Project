@@ -1,0 +1,20 @@
+.selector {
+    background: #24232B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
