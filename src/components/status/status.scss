@@ -26,8 +26,25 @@
     &__box {
         width: 6px;
         height: 15px;
-        border: 1px solid #fff;
+        border: 1px solid transparent;
         list-style: none;
         margin-right: 7px;
+
+        &.too-weak {
+            background: red;
+        }
+
+        &.weak {
+            background: orange;
+        }
+
+        &.medium {
+            background: yellow;
+        }
+
+        &.strong {
+            background: green;
+        }
     }
+
 }

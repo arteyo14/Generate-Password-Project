@@ -9,12 +9,12 @@ import './App.css'
 
 function App() {
   const [charLength, setCharLength] = useState(10)
-  const [pass, setPass] = useState("Please choose one of below options")
+  const [pass, setPass] = useState("")
   const [upper, setUpper] = useState(false)
   const [lower, setLower] = useState(false)
   const [number, setNumber] = useState(false)
   const [symbol, setSymbol] = useState(false)
-  const [status, setStatus] = useState(["WEAK", "MEDIUM", "STRENGTH"])
+  const [status, setStatus] = useState(null)
 
 
   //variables for characters
@@ -47,14 +47,26 @@ function App() {
   //function generate passwords
   function genPass() {
     let pass = "";
-    for (let i = 0; i <= charLength; i++) {
-      if (upper) pass += randomUpper();
-      if (lower) pass += randomLower();
-      if (number) pass += randomNumber();
-      if (symbol) pass += randomSymbol();
+    let passRandom = "";
+    for (let i = 0; i < charLength; i++) {
+      if (upper) {
+        passRandom += randomUpper()
+      }
+      if (lower) {
+        passRandom += randomLower()
+      };
+      if (number) {
+        passRandom += randomNumber()
+      };
+      if (symbol) {
+        passRandom += randomSymbol()
+      };
+      passRandom ? pass += passRandom[Math.floor(Math.random() * passRandom.length)] : ""
     }
-    const finalPass = pass.slice(0, charLength)
-    return finalPass
+
+    const finalPass = pass?.slice(0, charLength)
+
+    return finalPass ? finalPass : 'Choose a least one optional'
   }
 
   return (
@@ -63,7 +75,7 @@ function App() {
       <section className="App__container">
         <Selector length={charLength} setLength={setCharLength} />
         <Condition check={{ upper, lower, number, symbol }} setCheck={{ setUpper, setLower, setNumber, setSymbol }} />
-        <StatusComp status={status} setStatus={setStatus} />
+        <StatusComp pass={pass} status={status} setStatus={setStatus} />
         <button className="genbtn" onClick={() => setPass(genPass())}>GENERATE</button>
       </section>
     </div>
