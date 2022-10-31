@@ -9,7 +9,7 @@ import './App.css'
 
 function App() {
   const [charLength, setCharLength] = useState(10)
-  const [pass, setPass] = useState("Passwords Here")
+  const [pass, setPass] = useState("Please choose one of below options")
   const [upper, setUpper] = useState(false)
   const [lower, setLower] = useState(false)
   const [number, setNumber] = useState(false)
