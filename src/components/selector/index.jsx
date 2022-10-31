@@ -10,6 +10,7 @@ const Selector = ({ length, setLength }) => {
                     <span>{length}</span>
                 </div>
                 <input type="range" name="length" id="input__length" className='input__length' min={0} max={20} step={1} defaultValue={10} onChange={(e) => setLength(e.target.value)} />
+                <div className="sliderbar"></div>
             </div>
         </section>
     )

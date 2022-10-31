@@ -21,8 +21,7 @@ function App() {
   let lowerChar = "abcdefghijklmnopqrstuvwxyz"
   let upperChar = lowerChar.toUpperCase();
   let numberChar = "0123456789"
-  let symbolChar = "!@#$%&'()*+,-_./:;<=>"
-  let char = [];
+  let symbolChar = "!@#$%&'()*+.,-_="
 
   useEffect(() => {
 

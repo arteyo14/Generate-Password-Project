@@ -10,4 +10,33 @@
         font-size: 14px;
         font-weight: 400;
     }
+
+    &__checked {
+        background: transparent;
+        margin-right: 5px;
+        cursor: pointer;
+        -webkit-appearance: none;
+        appearance: none;
+        margin: 0;
+        width: 15px;
+        height: 15px;
+        border: 1px solid #A4FCAF;
+        margin-right: 10px;
+        border-radius: 2px;
+    }
+
+    &__checked::before {
+        border: 1px solid #A4FCAF;
+        background-color: transparent;
+        width: 25px;
+        height: 25px;
+
+    }
+
+    &__checked:checked {
+        background: #A4FCAF;
+        transform-origin: bottom left;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    }
+
 }
